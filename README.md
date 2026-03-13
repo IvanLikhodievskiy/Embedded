@@ -8,7 +8,25 @@ git clone https://github.com/IvanLikhodievskiy/Embedded.git
 
 ## [Task 1](./calculate.s)
 
-The programm written on ARM Assembly language performs the same action as the given program on C. The function calculate is called from _start where parameters repeat, x and y are set in registers r0, r1 and r2 respectively.
+The programm written on ARM Assembly language performs the same action as the following C program:
+
+´´´C
+uint32_t calculate(uint32_t repeat, uint32_t x, uint32_t y)
+{
+    uint32_t max = 10;
+    uint32_t res = 0;
+    for (int i = 0; i < repeat; i++)
+    {
+        uint32_t sum = x + y;
+        uint32_t mul = x * y;
+        res += sum + mul;
+        x = (sum < max) ? sum : max;
+    }
+    return res;
+}
+´´´
+
+The function calculate is called from _start where parameters repeat, x and y are set in registers r0, r1 and r2 respectively.
 
 Parameters repeat, x and y can be set in the Assembly code changing initial values in r0, r1 and r2 for the corresponding parameters.
 
