@@ -16,7 +16,7 @@ Due to the limitations of the register size, the program returnes mod 256 of the
 
 ### How to run
 
-In order to run the program on x86 processors, QEMU simulator is required. Then, you should be able to execute the following commands:
+In order to run the program on x86 processors, QEMU emulator is required. Then, you should be able to execute the following commands:
 
 ```console
 arm-linux-gnueabihf-as calculate.s -o calculate.o
