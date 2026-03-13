@@ -8,7 +8,7 @@ git clone https://github.com/IvanLikhodievskiy/Embedded.git
 
 ## [Task 1](./calculate.s)
 
-The programm written on ARM Assembly language performs the same action as the following C program:
+The programm written on ARM Assembly language realizes the following C function and runs it:
 
 ```C
 uint32_t calculate(uint32_t repeat, uint32_t x, uint32_t y)
