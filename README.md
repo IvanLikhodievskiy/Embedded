@@ -10,7 +10,7 @@ git clone https://github.com/IvanLikhodievskiy/Embedded.git
 
 The programm written on ARM Assembly language performs the same action as the following C program:
 
-´´´C
+```C
 uint32_t calculate(uint32_t repeat, uint32_t x, uint32_t y)
 {
     uint32_t max = 10;
@@ -24,7 +24,7 @@ uint32_t calculate(uint32_t repeat, uint32_t x, uint32_t y)
     }
     return res;
 }
-´´´
+```
 
 The function calculate is called from _start where parameters repeat, x and y are set in registers r0, r1 and r2 respectively.
 
