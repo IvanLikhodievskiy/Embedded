@@ -26,7 +26,7 @@ uint32_t calculate(uint32_t repeat, uint32_t x, uint32_t y)
 }
 ```
 
-The function calculate is called from __start_ where parameters _repeat_, _x_ and _y_ are set in registers _r0_, _r1_ and _r2_ respectively.
+The function _calculate_ is called from __start_ where parameters _repeat_, _x_ and _y_ are set in registers _r0_, _r1_ and _r2_ respectively.
 
 Parameters _repeat_, _x_ and _y_ can be set in the Assembly code changing initial values in _r0_, _r1_ and _r2_ for the corresponding parameters.
 
