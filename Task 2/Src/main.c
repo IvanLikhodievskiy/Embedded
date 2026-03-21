@@ -34,7 +34,7 @@ int main(void)
   uwPrescalerValue = (uint32_t)((SystemCoreClock / 2) / 10000) - 1;
 
   TimHandle.Instance               = TIMx;
-  TimHandle.Init.Period            = 10 - 1;        /* 10 кГц / 10 = 1 кГц → 1 мс */
+  TimHandle.Init.Period            = 10 - 1;
   TimHandle.Init.Prescaler         = uwPrescalerValue;
   TimHandle.Init.ClockDivision     = 0;
   TimHandle.Init.CounterMode       = TIM_COUNTERMODE_UP;
