@@ -48,7 +48,9 @@ To see the returned value, execute the following command:
 echo $?
 ```
 
-## [Task 2](https://github.com/IvanLikhodievskiy/Embedded/tree/main/Task%202)
+## [Task 2 (Part 1)](https://github.com/IvanLikhodievskiy/Embedded/tree/main/Task%202)
+
+**This is a legacy version of the part 1 of the task 2 that was created the following way because of several problems with STM32Cube software! For the current version check the section "Task 2"**
 
 The program runs on the **STM32F746G-DISCO** board and implements timer-based LED blinking with frequency control via a button.
 
@@ -78,3 +80,12 @@ Then import the project into **STM32CubeIDE**:
 4. Click **Finish**, agree to project conversion when prompted
 5. Build: **Ctrl+B**
 6. Flash and debug: right-click the project -> **Debug As -> STM32 Cortex-M C/C++ Application**
+
+## [Task 2 (Part 1)](https://github.com/IvanLikhodievskiy/Embedded/tree/main/Task%202%20Full)
+
+The program runs on the **STM32F746G-DISCO** board and implements timer-based LED blinking with frequency control via a button.
+
+**Behavior:**
+- After reset: LED1 blinks at 1 Hz with 50% duty cycle
+- Each short press of the USER button doubles the frequency until 16 Hz: 1 -> 2 -> 4 -> 8 -> 16 -> 1
+- Holding button changes the blinking mode: in the second mode instead of blinking 50% of the time period LED blinks for 50 ms of the time period
