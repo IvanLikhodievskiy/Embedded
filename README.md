@@ -85,6 +85,9 @@ Then import the project into **STM32CubeIDE**:
 
 The program runs on the **STM32F746G-DISCO** board and implements timer-based LED blinking with frequency and duty cycle control via a single button.
 
+**Technical details:** 
+The logic is completely non-blocking and relies on the hardware timer (`TIM6`) generating interrupts every 1 ms. It controls the built-in LED (`PI1`) and reads the USER button (`PI11`) with software debouncing.
+
 **Behavior:**
 - After reset: LED blinks at 1 Hz with a 50% duty cycle
 - Each short press of the USER button doubles the frequency up to 16 Hz: 1 -> 2 -> 4 -> 8 -> 16 -> 1
