@@ -81,11 +81,21 @@ Then import the project into **STM32CubeIDE**:
 5. Build: **Ctrl+B**
 6. Flash and debug: right-click the project -> **Debug As -> STM32 Cortex-M C/C++ Application**
 
-## [Task 2 (Part 1)](https://github.com/IvanLikhodievskiy/Embedded/tree/main/Task%202%20Full)
+## [Task 2](https://github.com/IvanLikhodievskiy/Embedded/tree/main/Task%202%20Full)
 
-The program runs on the **STM32F746G-DISCO** board and implements timer-based LED blinking with frequency control via a button.
+The program runs on the **STM32F746G-DISCO** board and implements timer-based LED blinking with frequency and duty cycle control via a single button.
 
 **Behavior:**
-- After reset: LED1 blinks at 1 Hz with 50% duty cycle
-- Each short press of the USER button doubles the frequency until 16 Hz: 1 -> 2 -> 4 -> 8 -> 16 -> 1
-- Holding button changes the blinking mode: in the second mode instead of blinking 50% of the time period LED blinks for 50 ms of the time period
+- After reset: LED blinks at 1 Hz with a 50% duty cycle
+- Each short press of the USER button doubles the frequency up to 16 Hz: 1 -> 2 -> 4 -> 8 -> 16 -> 1
+- Holding the button for ~1 second toggles the duty cycle mode. In the second mode, the LED lights up for exactly 50 ms per period regardless of the current frequency
+
+### How to build and run
+
+This project was generated using **STM32CubeMX 6.17.0** and **STM32CubeIDE 2.1.1**.
+
+1. Open STM32CubeIDE.
+2. Go to **File → Import... → General → Existing Projects into Workspace**.
+3. Select the folder `Task 2 Full` and click **Finish**.
+4. Build the project using **Ctrl+B**.
+5. To flash the board, right-click the project -> **Run As -> STM32 Cortex-M C/C++ Application**.
